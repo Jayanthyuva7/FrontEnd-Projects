@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="styles-product.css">
+</head>
+<body>
+    <div class="products-page-main">
+        <!-- Sidebar for filters -->
+        <aside class="products-sidebar">
+            <h3>PRICE</h3>
+            <label for="min-price">Min</label>
+            <input type="number" id="min-price" min="0" placeholder="0">
+            <label for="max-price">Max</label>
+            <input type="number" id="max-price" min="0" placeholder="5000+">
+            <h3>BRAND</h3>
+            <select id="brand-filter">
+                <option value="">All Brands</option>
+                <option value="Handmade">Handmade</option>
+                <option value="Traditional">Traditional</option>
+                <option value="Modern">Modern</option>
+            </select>
+            <h3>CUSTOMER RATINGS</h3>
+            <label><input type="checkbox" value="4"> 4★ & above</label>
+            <label><input type="checkbox" value="3"> 3★ & above</label>
+            <label><input type="checkbox" value="2"> 2★ & above</label>
+        </aside>
+
+        <!-- Main content section with toolbar and product grid -->
+        <section class="products-content">
+            <!-- Toolbar for sorting options -->
+            <div class="products-toolbar">
+                <span class="sort-label">Sort By</span>
+                <div class="sort-options">
+                    <button class="sort-option active">Popularity</button>
+                    <button class="sort-option">Price -- Low to High</button>
+                    <button class="sort-option">Price -- High to Low</button>
+                    <button class="sort-option">Newest First</button>
+                    <button class="sort-option">Discount</button>
+                </div>
+            </div>
+
+            <!-- Grid for product items -->
+            <div class="products-grid">
+                <!-- Product Item -->
+                <div class="product-item">
+                    <img src="Chairs.jpg" alt="Chairs">
+                    <h2>Chairs</h2>
+                    <p>₹ 1400</p>
+                    <button class="add-to-cart" data-product="Chairs" data-price="1400">Add to Cart</button>
+                </div>
+                <!-- Product Item -->
+                <div class="product-item">
+                    <img src="Clock.jpg" alt="Clock">
+                    <h2>Clock</h2>
+                    <p>₹ 600</p>
+                    <button class="add-to-cart" data-product="Clock" data-price="600">Add to Cart</button>
+                </div>
+                <!-- Product Item -->
+                <div class="product-item">
+                    <img src="Claypot.jpg" alt="Claypot">
+                    <h2>Claypot</h2>
+                    <p>₹ 260</p>
+                    <button class="add-to-cart" data-product="Claypot" data-price="260">Add to Cart</button>
+                </div>
+                <!-- Product Item -->
+                <div class="product-item">
+                    <img src="pendent.jpg" alt="Pendent">
+                    <h2>Pendent</h2>
+                    <p>₹ 300</p>
+                    <button class="add-to-cart" data-product="Pendent" data-price="300">Add to Cart</button>
+                </div>
+                <!-- Product Item -->
+                <div class="product-item">
+                    <img src="Penguin.jpg" alt="Penguin">
+                    <h2>Pendant Penguin</h2>
+                    <p>₹ 250</p>
+                    <button class="add-to-cart" data-product="Pendant Penguin" data-price="250">Add to Cart</button>
+                </div>
+                <!-- Product Item -->
+                <div class="product-item">
+                    <img src="WoodKnife.jpg" alt="Wood Knife">
+                    <h2>Wood Knife</h2>
+                    <p>₹ 160</p>
+                    <button class="add-to-cart" data-product="Wood Knife" data-price="160">Add to Cart</button>
+                </div>
+                <!-- Product Item -->
+                <div class="product-item">
+                    <img src="WollenGloves.jpg" alt="Wollen Gloves">
+                    <h2>Wollen Gloves</h2>
+                    <p>₹ 160</p>
+                    <button class="add-to-cart" data-product="Wollen Gloves" data-price="160">Add to Cart</button>
+                </div>
+                <!-- Product Item -->
+                <div class="product-item">
+                    <img src="embroideries.jpg" alt="Handmade Embroideries">
+                    <h2>Handmade Embroideries</h2>
+                    <p>₹ 200</p>
+                    <button class="add-to-cart" data-product="Handmade Embroideries" data-price="200">Add to Cart</button>
+                </div>
+                <!-- Product Item -->
+                <div class="product-item">
+                    <img src="Hand Made Net Pots.jpg" alt="Hand Made Net Pots">
+                    <h2>Hand Made Net Pots</h2>
+                    <p>₹ 600</p>
+                    <button class="add-to-cart" data-product="Hand Made Net Pots" data-price="600">Add to Cart</button>
+                </div>
+                <!-- Product Item -->
+                <div class="product-item">
+                    <img src="IronStatues.jpg" alt="Iron Statues">
+                    <h2>Iron Statues</h2>
+                    <p>₹ 800</p>
+                    <button class="add-to-cart" data-product="Iron Statues" data-price="800">Add to Cart</button>
+                </div>
+                <!-- Product Item -->
+                <div class="product-item">
+                    <img src="Origamihandcraft.jpg" alt="Origami Handcraft">
+                    <h2>Origami Handcraft</h2>
+                    <p>₹ 150</p>
+                    <button class="add-to-cart" data-product="Origami Handcraft" data-price="150">Add to Cart</button>
+                </div>
+                <!-- Product Item -->
+                <div class="product-item">
+                    <img src="Statues.jpg" alt="Handcrafted Statues">
+                    <h2>Handcrafted Statues</h2>
+                    <p>₹ 500</p>
+                    <button class="add-to-cart" data-product="Handcrafted Statues" data-price="500">Add to Cart</button>
+                </div>
+                <!-- Product Item -->
+                <div class="product-item">
+                    <img src="Traditional Masks.jpg" alt="Traditional Masks">
+                    <h2>Traditional Masks</h2>
+                    <p>₹ 1200</p>
+                    <button class="add-to-cart" data-product="Traditional Masks" data-price="1200">Add to Cart</button>
+                </div>
+                <!-- Handmade Product Item (external image) -->
+                <div class="product-item">
+                    <img src="https://imgs.search.brave.com/VUZ-bVR5dOiNT01UPBHe7CkKaI_xVn7nObg3TqA7ItY/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTUz/NDk1NTU4L3Bob3Rv/L3N0cmF3LWJhc2tl/dC5qcGc_cz02MTJ4/NjEyJnc9MCZrPTIw/JmM9RmlrMHBGaXhp/M2lVNE9WQjk4a01q/LTJXbl8zT1VTeGpC/UEtYc2tTZ2YyST0" alt="Handmade Woven Basket">
+                    <h2>Handmade Woven Basket</h2>
+                    <p>₹ 850</p>
+                    <button class="add-to-cart" data-product="Handmade Woven Basket" data-price="850">Add to Cart</button>
+                </div>
+                <!-- Handmade Product Item (external image) -->
+                <div class="product-item">
+                    <img src="https://imgs.search.brave.com/DSpNClrSeZT8qPRMwNih4JGPlwPVnWPUyhRF4YNI79c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLmV0/c3lzdGF0aWMuY29t/LzE4NzU2NTQ3L3Iv/aWwvZTIxMmM1LzI3/OTQxMzg0NTEvaWxf/NjAweDYwMC4yNzk0/MTM4NDUxXzR1YXUu/anBn" alt="Hand-painted Ceramic Mug">
+                    <h2>Hand-painted Ceramic Mug</h2>
+                    <p>₹ 280</p>
+                    <button class="add-to-cart" data-product="Hand-painted Ceramic Mug" data-price="280">Add to Cart</button>
+                </div>
+                <!-- Handmade Product Item (external image) -->
+                <div class="product-item">
+                    <img src="https://imgs.search.brave.com/3QXO-HzyMiaNrHKg8bJzkPWneXm3qsMkj96rBoBG0JE/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9yb29t/dGVyeS5jb20vY2Ru/L3Nob3AvZmlsZXMv/Ym9oby1hZXN0aGV0/aWMtbWFjcmFtZS13/YWxsLWhhbmdpbmct/d2l0aC1tb29uLWRl/Y29yYXRpb25zLXJv/b210ZXJ5NS0xLmpw/Zz92PTE3MTY0Nzg2/MDMmd2lkdGg9MTEw/MA" alt="Macrame Wall Hanging">
+                    <h2>Macrame Wall Hanging</h2>
+                    <p>₹ 480</p>
+                    <button class="add-to-cart" data-product="Macrame Wall Hanging" data-price="480">Add to Cart</button>
+                </div>
+                <!-- Handmade Product Item (external image) -->
+                <div class="product-item">
+                    <img src="https://imgs.search.brave.com/KJpN5NPrW87rIQ7Kc7k3K1SijzNn5tAQ-SOHF5PKrLk/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9sYW5j/YXN0ZXJjYXN0aXJv/bi5jb20vY2RuL3No/b3AvcHJvZHVjdHMv/a2l0Y2hlbnV0ZW5z/aWxzZXRfZ3JhbmRl/LmpwZz92PTE2MjMx/Nzg3NTg" alt="Handcrafted Wooden Spoon Set">
+                    <h2>Handcrafted Wooden Spoon Set</h2>
+                    <p>₹ 290</p>
+                    <button class="add-to-cart" data-product="Handcrafted Wooden Spoon Set" data-price="290">Add to Cart</button>
+                </div>
+                <!-- Handmade Product Item (external image) -->
+                <div class="product-item">
+                    <img src="https://imgs.search.brave.com/zuuNu1PtTqQhQ-J1ywgxRN9euBfR-WGqoPS6QT9-DNs/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9lYXN5/Y3JvY2hldC5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMTcv/MDUvQ3JvY2hldFBs/YW50SG9sZGVyNi5q/cGc" alt="Crochet Plant Holder">
+                    <h2>Crochet Plant Holder</h2>
+                    <p>₹ 180</p>
+                    <button class="add-to-cart" data-product="Crochet Plant Holder" data-price="180">Add to Cart</button>
+                </div>
+                <!-- Handmade Product Item (external image) -->
+                <div class="product-item">
+                    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Handmade Dreamcatcher">
+                    <h2>Handmade Dreamcatcher</h2>
+                    <p>₹ 320</p>
+                    <button class="add-to-cart" data-product="Handmade Dreamcatcher" data-price="320">Add to Cart</button>
+                </div>
+                <!-- Handmade Product Item (external image) -->
+                <div class="product-item">
+                    <img src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?auto=format&fit=crop&w=400&q=80" alt="Handwoven Table Runner">
+                    <h2>Balloons</h2>
+                    <p>₹ 410</p>
+                    <button class="add-to-cart" data-product="Balloons" data-price="410">Add to Cart</button>
+                </div>
+                <!-- Handmade Product Item (external image) -->
+                <div class="product-item">
+                    <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="Handcrafted Clay Vase">
+                    <h2>T-shirts</h2>
+                    <p>₹ 360</p>
+                    <button class="add-to-cart" data-product="T-shirts" data-price="260">Add to Cart</button>
+                </div>
+                <!-- Handmade Product Item (external image) -->
+                <div class="product-item">
+                    <img src="https://imgs.search.brave.com/01gw-SnfKu5AaqYB_ttnlFvXIOF3TKQPsm5O2lcUwbk/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cHJvc3Blcml0eWNh/bmRsZS5jb20vY2Ru/L3Nob3AvZmlsZXMv/RmxpZ2h0XzMtY2Fu/ZGxlc180MDIwXzEy/WDhfZGQxNTAyNzEt/NmQyMi00YTA5LThm/MTMtYzNkOWRmNmQw/YWRhLmpwZz92PTE3/Mzk0NzQzODYmd2lk/dGg9MTEwMA" alt="Handmade Scented Candle">
+                    <h2>Handmade Scented Candle</h2>
+                    <p>₹ 150</p>
+                    <button class="add-to-cart" data-product="Handmade Scented Candle" data-price="150">Add to Cart</button>
+                </div>
+                <!-- Handmade Product Item (external image) -->
+                <div class="product-item">
+                    <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" alt="Hand-painted Stone Art">
+                    <h2>Hand-painted Stone Art</h2>
+                    <p>₹ 120</p>
+                    <button class="add-to-cart" data-product="Hand-painted Stone Art" data-price="120">Add to Cart</button>
+                </div>
+                <!-- Handmade Product Item (external image) -->
+                <div class="product-item">
+                    <img src="https://imgs.search.brave.com/_qIZjyvQPNk_UJZ3F60l6aqZG_2Ec6Tw9higLJdPu_s/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pLmV0/c3lzdGF0aWMuY29t/LzI0NjQ5MjAzL3Iv/aWwvMjIzMGMzLzU1/NjgzNzAxMjAvaWxf/NjAweDYwMC41NTY4/MzcwMTIwX25xOTUu/anBn" alt="Handcrafted Ceramic Plate">
+                    <h2>Handcrafted Ceramic Plate</h2>
+                    <p>₹ 240</p>
+                    <button class="add-to-cart" data-product="Handcrafted Ceramic Plate" data-price="240">Add to Cart</button>
+                </div>
+                <!-- Handmade Product Item (external image) -->
+                <div class="product-item">
+                    <img src="https://imgs.search.brave.com/vfaDqNeb6BIXMqRXRFzRlPfXHZKTPJZauqTd-3h_QoQ/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pLmV0/c3lzdGF0aWMuY29t/LzQxMjAwMzU0L2Mv/MTQ0MS8xNDQxLzMy/NS8wL2lsLzU2ZDUy/YS80ODMxOTE3ODUx/L2lsXzYwMHg2MDAu/NDgzMTkxNzg1MV9v/dG01LmpwZw" alt="Handmade Macrame Coaster">
+                    <h2>Handmade Macrame Coaster</h2>
+                    <p>₹ 90</p>
+                    <button class="add-to-cart" data-product="Handmade Macrame Coaster" data-price="90">Add to Cart</button>
+                </div>
+                <!-- Handmade Product Item (external image) -->
+                <div class="product-item">
+                    <img src="https://imgs.search.brave.com/UrEpunkZTUOSp_iVNRfFiLKURIbq_Nrig2bso6irCyY/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pLmV0/c3lzdGF0aWMuY29t/LzQ4NzkzOTQ0L2Mv/NzE0LzcxNC8wLzAv/aWwvZDViMzdmLzU3/MjY2MzI1NjMvaWxf/NjAweDYwMC41NzI2/NjMyNTYzX3NuczEu/anBn" alt="Handwoven Storage Basket">
+                    <h2>Handwoven Storage Basket</h2>
+                    <p>₹ 370</p>
+                    <button class="add-to-cart" data-product="Handwoven Storage Basket" data-price="370">Add to Cart</button>
+                </div>
+                <!-- Handmade Product Item (external image) -->
+                <div class="product-item">
+                    <img src="https://imgs.search.brave.com/wFCFM-SviJklxKSXIgZzpRsL_Ea-xIC-4ueO_1Q505A/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODFTM1loUHI2Nkwu/anBn" alt="Handmade Crochet Keychain">
+                    <h2>Handmade Crochet Keychain</h2>
+                    <p>₹ 80</p>
+                    <button class="add-to-cart" data-product="Handmade Crochet Keychain" data-price="80">Add to Cart</button>
+                </div>
+                <!-- Handmade Product Item (external image) -->
+                <div class="product-item">
+                    <img src="https://imgs.search.brave.com/4-0ZjFVO9pBNjaYZ9_REbnmzZwZ54AXePnyOpKoi4bU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pLmV0/c3lzdGF0aWMuY29t/LzM0MTQxMjczL3Iv/aWwvZDJhZGQwLzM3/MzQyNzkyMjMvaWxf/NjAweDYwMC4zNzM0/Mjc5MjIzX3IzOWwu/anBn" alt="Handcrafted Wooden Bowl">
+                    <h2>Handcrafted Wooden Bowl</h2>
+                    <p>₹ 210</p>
+                    <button class="add-to-cart" data-product="Handcrafted Wooden Bowl" data-price="210">Add to Cart</button>
+                </div>
+                <!-- Handmade Product Item (external image) -->
+                <div class="product-item">
+                    <img src="https://imgs.search.brave.com/wpu99CUH195eE4qxM6UFYx8tRyXcSZ-QVxpvIKL4Zd8/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pLmV0/c3lzdGF0aWMuY29t/LzE3NTAzNDI2L2Mv/MTQxNy8xNDE3LzIz/Ny8wL2lsLzlhZTQ0/YS8zNjk5MzM3NTQ5/L2lsXzYwMHg2MDAu/MzY5OTMzNzU0OV8y/a2U0LmpwZw" alt="Handmade Clay Figurine">
+                    <h2>Handmade Clay Figurine</h2>
+                    <p>₹ 180</p>
+                    <button class="add-to-cart" data-product="Handmade Clay Figurine" data-price="180">Add to Cart</button>
+                </div>
+                <!-- Handmade Product Item (external image) -->
+                <div class="product-item">
+                    <img src="https://imgs.search.brave.com/rQ1gYuivPSSMVpPk2AXIfDuAgvmM5W45UJUOawpRfog/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFQRDlwcjhhMEwu/anBn" alt="Handcrafted Dreamcatcher Pendant">
+                    <h2>Handcrafted Dreamcatcher Pendant</h2>
+                    <p>₹ 260</p>
+                    <button class="add-to-cart" data-product="Handcrafted Dreamcatcher Pendant" data-price="260">Add to Cart</button>
+                </div>
+                <!-- Handmade Product Item (external image) -->
+                <div class="product-item">
+                    <img src="https://imgs.search.brave.com/5IzxCKIlFzJ0uplVp8M20Y6BCRLlMB8DVGXwYsXPj_E/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/aW5jYXNhZGVjb3Iu/Y29tL2Nkbi9zaG9w/L2ZpbGVzL2luY2Fz/YS1wbGFjZW1hdC1o/YW5kd292ZW4tY290/dG9uLXRhYmxlLWNo/YXJjb2FsLTNfMjA0/OHguanBnP3Y9MTcx/ODM5MDk4Ng" alt="Handwoven Placemats">
+                    <h2>Handwoven Placemats</h2>
+                    <p>₹ 210</p>
+                    <button class="add-to-cart" data-product="Handwoven Placemats" data-price="210">Add to Cart</button>
+                </div>
+                <!-- Handmade Product Item (external image) -->
+                <div class="product-item">
+                    <img src="https://imgs.search.brave.com/LRKSx_I0_O4BbsYN4JHTpKjw8dj7mPvDD8WoUF8ygDY/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjE4MnBVZkE5T0wu/anBn" alt="Handmade Macrame Bag">
+                    <h2>Handmade Macrame Bag</h2>
+                    <p>₹ 520</p>
+                    <button class="add-to-cart" data-product="Handmade Macrame Bag" data-price="520">Add to Cart</button>
+                </div>
+                <!-- Handmade Product Item (external image) -->
+                <div class="product-item">
+                    <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Hand-painted Ceramic Plate">
+                    <h2>Acrylic Painting</h2>
+                    <p>₹ 260</p>
+                    <button class="add-to-cart" data-product="Acrylic Painting" data-price="260">Add to Cart</button>
+                </div>
+                <!-- Handmade Product Item (external image) -->
+                <div class="product-item">
+                    <img src="https://imgs.search.brave.com/fFiZ_EjQ0n12Kl-fIPqx3pH93XOAkL2NJ3MkzbPljvM/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9hbmlt/ZWJlZS5zMy5hbWF6/b25hd3MuY29tL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDIzLzA0/LzE2MjIzNjA3L0pK/YXBhbi1BbmltZS1I/YXlhby1NaXlhemFr/aS1TdHVkaW8tR2hp/YmxpLU5hdXNpY2Fh/LVRldG8tRm94LVNx/dWlycmVsLWtleXJp/bmctY2xpcC1QbHVz/aC1Ub3ktR2lmdC1I/aWdoLTItMzAweDIw/MC5qcGc" alt="Handmade Crochet Basket">
+                    <h2>Pokemon Soft Toy</h2>
+                    <p>₹ 240</p>
+                    <button class="add-to-cart" data-product="Pokemon Soft Toy" data-price="240">Add to Cart</button>
+                </div>
+                <!-- Handmade Product Item (external image) -->
+                <div class="product-item">
+                    <img src="https://imgs.search.brave.com/48_2KG7v9YZ25z6KwNNGxegQ_gnFn86yYw2alXXE1sg/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzE0LzQ2LzQ5LzE4/LzM2MF9GXzE0NDY0/OTE4MDNfcnNBWnVE/TzVpcDNNWDREdlZj/dERlSE5ia1ZPeklY/YVEuanBn" alt="Handwoven Fruit Basket">
+                    <h2>Handwoven Fruit Basket</h2>
+                    <p>₹ 390</p>
+                    <button class="add-to-cart" data-product="Handwoven Fruit Basket" data-price="390">Add to Cart</button>
+                </div>
+                <!-- Handmade Product Item (external image) -->
+                <div class="product-item">
+                    <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="Handmade Clay Pot">
+                    <h2>Handmade T-Shirts</h2>
+                    <p>₹ 210</p>
+                    <button class="add-to-cart" data-product="Handmade T-Shirts" data-price="210">Add to Cart</button>
+                </div>
+                <!-- Handmade Product Item (external image) -->
+                <div class="product-item">
+                    <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=400&q=80" alt="Handcrafted Wooden Stool">
+                    <h2>Handcrafted Wooden Stool</h2>
+                    <p>₹ 170</p>
+                    <button class="add-to-cart" data-product="Handcrafted Wooden Stool" data-price="170">Add to Cart</button>
+                </div>
+                <!-- Handmade Product Item (external image) -->
+                <div class="product-item">
+                    <img src="https://imgs.search.brave.com/X2wpcRdXzD9pmaxccbxIv2RZD2xJW_2L_dswDEXJWvw/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c3dlZXRncmFzc29u/bGluZS5jb20vY2Ru/L3Nob3AvcHJvZHVj/dHMvSU1HXzU2NjUu/anBnP3Y9MTcwMTM3/NzQ1OCZ3aWR0aD01/MzM" alt="Handmade Soy Candle">
+                    <h2>Handmade Soy Candle</h2>
+                    <p>₹ 190</p>
+                    <button class="add-to-cart" data-product="Handmade Soy Candle" data-price="190">Add to Cart</button>
+                </div>
+                <!-- Handmade Product Item (external image) -->
+                <div class="product-item">
+                    <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" alt="Hand-painted Pebble Art">
+                    <h2>Hand-painted Pebble Art</h2>
+                    <p>₹ 110</p>
+                    <button class="add-to-cart" data-product="Hand-painted Pebble Art" data-price="110">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Cart Section -->
+    <div class="cart" id="cart">
+        <h2>Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: ₹<span id="cart-total">0</span></p>
+        <p>Total Items: <span id="cart-item-count">0</span></p>
+        <button onclick="location.href='cartpage.html'" class="view-cart-button">View Cart</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+    // --- Product Sorting Logic with In/Out Animation ---
+    document.addEventListener('DOMContentLoaded', function() {
+        const grid = document.querySelector('.products-grid');
+        const sortButtons = document.querySelectorAll('.sort-option');
+        if (!grid || !sortButtons.length) return;
+
+        // Helper to get product data from DOM
+        function getProductData(node) {
+            const name = node.querySelector('h2')?.textContent?.trim() || '';
+            const priceText = node.querySelector('p')?.textContent || '';
+            const price = parseFloat(priceText.replace(/[^\d.]/g, '')) || 0;
+            return { node, name, price };
+        }
+
+        // Animate out
+        function animateOut(nodes, cb) {
+            nodes.forEach(n => {
+                n.classList.add('animating');
+                n.classList.remove('animating-in', 'animated-final');
+            });
+            setTimeout(cb, 300);
+        }
+        // Animate in
+        function animateIn(nodes) {
+            nodes.forEach(n => {
+                n.classList.remove('animating');
+                n.classList.add('animating-in');
+            });
+            setTimeout(() => {
+                nodes.forEach(n => {
+                    n.classList.remove('animating-in');
+                    n.classList.add('animated-final');
+                });
+            }, 300);
+        }
+
+        // Sort handler
+        sortButtons.forEach(btn => {
+            btn.addEventListener('click', function() {
+                sortButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const allProducts = Array.from(grid.querySelectorAll('.product-item')).map(getProductData);
+                let sorted;
+                switch (btn.textContent.trim()) {
+                    case 'Price -- Low to High':
+                        sorted = allProducts.sort((a, b) => a.price - b.price);
+                        break;
+                    case 'Price -- High to Low':
+                        sorted = allProducts.sort((a, b) => b.price - a.price);
+                        break;
+                    case 'Newest First':
+                        sorted = allProducts.reverse(); // fallback: reverse order
+                        break;
+                    case 'Discount':
+                        sorted = allProducts; // No discount info, fallback to original
+                        break;
+                    default: // Popularity or any other
+                        sorted = allProducts;
+                }
+                // Animate out, then sort, then animate in
+                const nodes = allProducts.map(p => p.node);
+                animateOut(nodes, () => {
+                    grid.innerHTML = '';
+                    sorted.forEach(p => grid.appendChild(p.node));
+                    animateIn(sorted.map(p => p.node));
+                });
+            });
+        });
+    });
+    </script>
+</body>
+</html>

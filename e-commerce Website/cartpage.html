@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="styles-cart.css">
+</head>
+<body>
+    <div class="cart-page-container">
+        <div class="cart-page-title">Your Cart</div>
+        <div class="cart-main-flex">
+            <div class="cart-items-section">
+                <ul class="cart-list" id="cart-list"></ul>
+                <div class="empty-cart" id="empty-cart-msg" style="display:none;">Your cart is empty.</div>
+            </div>
+            <div class="cart-summary-section">
+                <div class="cart-summary-title">PRICE DETAILS</div>
+                <div class="summary-row"><span id="summary-items-label">Price (<span id="summary-items-count">0</span> item)</span><span>₹<span id="summary-items-price">0</span></span></div>
+                <div class="summary-row"><span>Discount</span><span style="color:#43a047;">– ₹<span id="summary-discount">0</span></span></div>
+                <div class="summary-row"><span>Delivery Charges</span><span id="summary-delivery">Free</span></div>
+                <div class="summary-row"><span>Protect Promise Fee</span><span>₹<span id="summary-fee">0</span></span></div>
+                <div class="summary-row total">Total Amount <span>₹<span id="cart-total">0</span></span></div>
+                <div class="summary-save" id="summary-save">You will save ₹<span id="summary-save-amt">0</span> on this order</div>
+                <div class="summary-note"><span>✔</span>Safe and Secure Payments. Easy returns. 100% Authentic products.</div>
+                <button class="place-order-btn">Place Order</button>
+            </div>
+        </div>
+    </div>
+    <script>
+    function loadCart() {
+        const cart = JSON.parse(localStorage.getItem('cartPageItems') || '[]');
+        return cart;
+    }
+    function saveCart(cart) {
+        localStorage.setItem('cartPageItems', JSON.stringify(cart));
+    }
+    function removeCartItem(idx) {
+        let cart = loadCart();
+        cart.splice(idx, 1);
+        saveCart(cart);
+        renderCart();
+    }
+    function renderCart() {
+        const cart = loadCart();
+        const list = document.getElementById('cart-list');
+        const totalSection = document.getElementById('cart-total');
+        const emptyMsg = document.getElementById('empty-cart-msg');
+        // Summary elements
+        const itemsCount = document.getElementById('summary-items-count');
+        const itemsPrice = document.getElementById('summary-items-price');
+        const discount = document.getElementById('summary-discount');
+        const delivery = document.getElementById('summary-delivery');
+        const fee = document.getElementById('summary-fee');
+        const saveAmt = document.getElementById('summary-save-amt');
+        list.innerHTML = '';
+        let total = 0, price = 0, disc = 0, feeVal = 9;
+        if (cart.length === 0) {
+            emptyMsg.style.display = 'block';
+            totalSection.textContent = 0;
+            itemsCount.textContent = 0;
+            itemsPrice.textContent = 0;
+            discount.textContent = 0;
+            fee.textContent = 0;
+            saveAmt.textContent = 0;
+            return;
+        } else {
+            emptyMsg.style.display = 'none';
+        }
+        cart.forEach((item, idx) => {
+            const li = document.createElement('li');
+            li.innerHTML = `<span><img src="${item.img || ''}" alt="${item.name}"><span>${item.name}</span></span><span>₹${item.price} x ${item.qty} <button class='remove-btn' data-idx='${idx}'>Remove</button></span>`;
+            list.appendChild(li);
+            price += item.price * item.qty;
+            disc += (item.mrp ? (item.mrp - item.price) * item.qty : Math.round(item.price * 0.10 * item.qty));
+        });
+        // Add remove event listeners
+        list.querySelectorAll('.remove-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                removeCartItem(parseInt(this.getAttribute('data-idx')));
+            });
+        });
+        total = price - disc + feeVal; // Subtract discount from total
+        totalSection.textContent = total;
+        itemsCount.textContent = cart.reduce((a, b) => a + (b.qty || 1), 0);
+        itemsPrice.textContent = price;
+        discount.textContent = disc;
+        fee.textContent = feeVal;
+        saveAmt.textContent = disc;
+    }
+    document.addEventListener('DOMContentLoaded', renderCart);
+    </script>
+</body>
+</html>
