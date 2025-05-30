@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables & Datatypes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Employee Info Display</h1>
+    <p id="employee-info"></p>
+    <script>
+        let employeeName = "Employee1";
+        let employeeAge = 30;
+        let employeePosition = "Software Engineer";
+        let employeeSalary = 75000.50;
+        let employeeIsActive = true;
+        let employeeSkills = ["JavaScript", "Python", "Java"];
+        let employeeAddress = null;
+        let employeeDepartment;
+        let employeeID = ("380u93$8f3");
+        let employeeBigInt = 1234567890123456789012345678901234567890n;
+
+        document.getElementById("employee-info").innerHTML = `
+            <strong>Name:</strong> ${employeeName} <br><br>
+            <strong>Age:</strong> ${employeeAge} <br><br>
+            <strong>Position:</strong> ${employeePosition} <br><br>
+            <strong>Salary:</strong> $${employeeSalary.toFixed(2)} <br><br>
+            <strong>Active:</strong> ${employeeIsActive ? "Yes" : "No"} <br><br>
+            <strong>Skills:</strong> ${employeeSkills.join(", ")} <br><br>
+            <strong>Address:</strong> ${employeeAddress ? employeeAddress : "N/A"} <br><br>
+            <strong>Department:</strong> ${employeeDepartment ? employeeDepartment : "N/A"} <br><br>
+            <strong>Employee ID:</strong> ${employeeID.toString()} <br><br>
+            <strong>BigInt:</strong> ${employeeBigInt}
+        `;
+    </script>
+</body>
+</html>

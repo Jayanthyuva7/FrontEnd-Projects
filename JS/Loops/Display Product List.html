@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <style>
+        h1{
+            text-align: center;
+            color: #2c3e50;
+            font-size: 2.5em;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+            min-height: 100vh;
+        }
+        table {
+            width: 80%;
+            margin: 40px auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(44, 62, 80, 0.15);
+            background: #fff;
+        }
+        th, td {
+            padding: 16px 12px;
+            text-align: left;
+            font-size: 1.1em;
+        }
+        th {
+            background: #fda085;
+            color: #fff;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        tr:nth-child(even) {
+            background: #f6d36533;
+        }
+        tr:hover {
+            background: #fda08522;
+            transition: background 0.2s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Product List</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Product ID</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table><script>
+        const products = [
+            { id: 101, name: 'Laptop', category: 'Electronics', price: 75000 },
+            { id: 102, name: 'Chair', category: 'Furniture', price: 3500 },
+            { id: 103, name: 'Pen', category: 'Stationery', price: 20 },
+            { id: 104, name: 'Mobile', category: 'Electronics', price: 25000 },
+            { id: 105, name: 'Notebook', category: 'Stationery', price: 50 },
+            { id: 106, name: 'Table', category: 'Furniture', price: 5000 },
+            { id: 107, name: 'Headphones', category: 'Electronics', price: 2000 },
+            { id: 108, name: 'Backpack', category: 'Accessories', price: 1200 },
+            { id: 109, name: 'Bottle', category: 'Accessories', price: 300 },
+            { id: 110, name: 'Lamp', category: 'Furniture', price: 800 }
+        ];
+
+        const tbody = document.querySelector('tbody');
+        products.forEach(product => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${product.id}</td>
+                <td>${product.name}</td>
+                <td>${product.category}</td>
+                <td>${product.price}</td>
+            `;
+            tbody.appendChild(row);
+        });
+    </script>
+</body>
+</html>

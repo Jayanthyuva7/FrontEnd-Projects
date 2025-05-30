@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Form Validation</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        body {
+            font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+            background: #f4f8fb;
+            color: #222;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        h2 {
+            text-align: center;
+            color: #1a237e;
+            margin-top: 40px;
+            margin-bottom: 10px;
+        }
+        p.subtitle {
+            text-align: center;
+            color: #3949ab;
+            margin-bottom: 30px;
+        }
+        form {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(60,60,120,0.08);
+            max-width: 420px;
+            width: 100%;
+            margin: 0 auto 32px auto;
+            padding: 32px 28px 24px 28px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            color: #1a237e;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        input, select {
+            width: 95%;
+            padding: 9px 11px;
+            background: #f7fafc;
+            border: 1px solid #bdbdbd;
+            border-radius: 6px;
+            color: #222;
+            font-size: 1em;
+            outline: none;
+            transition: border 0.2s;
+        }
+        input:focus, select:focus {
+            border: 1.5px solid #3949ab;
+        }
+        .error {
+            color: #d50060;
+            font-size: 0.95em;
+            margin-top: 4px;
+        }
+        button[type="submit"] {
+            background: #3949ab;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 10px 0;
+            width: 100%;
+            font-size: 1.08em;
+            font-weight: 600;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button[type="submit"]:hover {
+            background: #1a237e;
+        }
+        .success-message {
+            color: #2e7d32;
+            background: #e8f5e9;
+            border: 1px solid #c8e6c9;
+            border-radius: 6px;
+            padding: 10px 0;
+            text-align: center;
+            margin-bottom: 18px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <h2>Employee Registration</h2>
+    <p class="subtitle">Please fill in the details below to register a new employee.</p>
+    <form id="employeeForm" novalidate>
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="e.g. John Doe">
+            <div class="error" id="nameError"></div>
+        </div>
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="e.g. john.doe@email.com">
+            <div class="error" id="emailError"></div>
+        </div>
+        <div class="form-group">
+            <label for="empId">Employee ID</label>
+            <input type="text" id="empId" name="empId" placeholder="e.g. EMP1234">
+            <div class="error" id="empIdError"></div>
+        </div>
+        <div class="form-group">
+            <label for="department">Department</label>
+            <select id="department" name="department">
+                <option value="">Select department</option>
+                <option value="HR">HR</option>
+                <option value="Engineering">Engineering</option>
+                <option value="Sales">Sales</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Finance">Finance</option>
+            </select>
+            <div class="error" id="departmentError"></div>
+        </div>
+        <div class="form-group">
+            <label for="doj">Date of Joining</label>
+            <input type="date" id="doj" name="doj">
+            <div class="error" id="dojError"></div>
+        </div>
+        <button type="submit">Register Employee</button>
+        <div class="success-message" id="successMsg" style="display:none;">Employee registered successfully!</div>
+    </form>
+    <script>
+        document.getElementById('employeeForm').addEventListener('submit', function(event) {
+            let valid = true;
+            document.getElementById('nameError').textContent = '';
+            document.getElementById('emailError').textContent = '';
+            document.getElementById('empIdError').textContent = '';
+            document.getElementById('departmentError').textContent = '';
+            document.getElementById('dojError').textContent = '';
+            document.getElementById('successMsg').style.display = 'none';
+
+            const name = document.getElementById('name').value.trim();
+            if (name === '') {
+                document.getElementById('nameError').textContent = 'Full name is required.';
+                valid = false;
+            }
+
+            const email = document.getElementById('email').value.trim();
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email === '') {
+                document.getElementById('emailError').textContent = 'Email is required.';
+                valid = false;
+            } else if (!emailPattern.test(email)) {
+                document.getElementById('emailError').textContent = 'Enter a valid email address.';
+                valid = false;
+            }
+
+            const empId = document.getElementById('empId').value.trim();
+            if (empId === '') {
+                document.getElementById('empIdError').textContent = 'Employee ID is required.';
+                valid = false;
+            }
+
+            const department = document.getElementById('department').value;
+            if (department === '') {
+                document.getElementById('departmentError').textContent = 'Please select a department.';
+                valid = false;
+            }
+
+            const doj = document.getElementById('doj').value;
+            if (doj === '') {
+                document.getElementById('dojError').textContent = 'Date of joining is required.';
+                valid = false;
+            }
+
+            if (!valid) {
+                event.preventDefault();
+            } else {
+                event.preventDefault();
+                document.getElementById('successMsg').style.display = 'block';
+                this.reset();
+            }
+        });
+    </script>
+</body>
+</html>

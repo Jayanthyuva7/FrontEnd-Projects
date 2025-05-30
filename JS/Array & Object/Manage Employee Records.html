@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Employee Records</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: radial-gradient(circle,white 50%, #f0f0f0);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            color: #333;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        td:nth-child(even){
+            background-color: #f9f9f9;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        div{
+            margin-top: 10%;
+            text-align: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Manage Employee Records using Arrays & Objects</h1>
+    <div>
+    <p>Storing multiple employees using objects and arrays, then access or updating them.</p>
+        <table border="1">
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Department</th>
+                <th>Salary</th>
+            </tr>
+            <script>
+                const employees = [
+                    { name: "Employee 1", position: "Software Engineer", department: "IT", salary: 60000 },
+                    { name: "Employee 2", position: "Project Manager", department: "IT", salary: 80000 },
+                { name: "Employee 3", position: "HR Manager", department: "HR", salary: 70000 },
+                    { name: "Employee 4", position: "Data Analyst", department: "Finance", salary: 65000 },
+                    { name: "Employee 5", position: "Marketing Specialist", department: "Marketing", salary: 55000 },
+                    { name: "Employee 6", position: "Sales Executive", department: "Sales", salary: 50000 },
+                    { name: "Employee 7", position: "Web Developer", department: "IT", salary: 62000 },
+                    { name: "Employee 8", position: "Graphic Designer", department: "Marketing", salary: 58000 }
+            ];
+            employees.forEach(employee => {
+                document.write("<tr>");
+                document.write("<td>" + employee.name + "</td>");
+                document.write("<td>" + employee.position + "</td>");
+                document.write("<td>" + employee.department + "</td>");
+                document.write("<td>" + employee.salary + "</td>");
+                document.write("</tr>");
+            });
+        </script>
+    </table>
+    </div>
+</body>
+</html>

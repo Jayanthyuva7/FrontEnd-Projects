@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ecf0f1;
+            color: #2c3e50;
+            margin: 0;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #34495e;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        .container {
+            height: 80vh;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            margin: 20px 0;
+            margin-top: 15%;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+            font-size: 1em;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        #output {
+            margin-top: 20px;
+            font-size: 1.1em;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Functions</h1>
+        <p style="padding: 20px;">Enter two numbers to see their sum, difference, product, and quotient.</p>
+        <form id="functionForm">
+            <input type="number" id="num1" placeholder="Enter first number" required />
+            <input type="number" id="num2" placeholder="Enter second number" required />
+            <button type="submit">Submit</button>
+        </form>
+        <div id="output"></div>
+    </div>
+    <script>
+        const add = function(a, b) {
+            return a + b;
+        };
+
+        const multiply = (a, b) => a * b;
+
+        const divide = (a, b) => {
+            if (b === 0) {
+                return 'Cannot divide by zero';
+            }
+            return a / b;
+        };
+
+        const subtract = (a, b) => a - b;
+
+        document.getElementById('functionForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+
+            const outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = `
+                <p>Sum: ${add(num1, num2)}</p>
+                <p>Product: ${multiply(num1, num2)}</p>
+                <p>Quotient: ${divide(num1, num2)}</p>
+                <p>Difference: ${subtract(num1, num2)}</p>
+            `;
+        });
+    </script>
+</body>
+</html>

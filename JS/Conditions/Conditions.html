@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conditions</title>
+    <style>
+        .code {
+            font-family: monospace;
+            margin-top: 80px;
+            width: fit-content;
+            background-color: #000000;
+            color: white;
+            text-align: left;
+            padding: 40px;
+            border-radius: 5px;
+        }
+        h1{
+            text-align: center;
+            color: #000000;
+            font-size: 2.5em;
+        }
+        li {
+            margin-left: 100px;
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Colors using Conditions</h1>
+    <ul>
+        <li>Exceeds Expectations</li>
+        <li>Meets Expectations</li>
+        <li>Needs Improvement</li>
+    </ul>
+    <div class="code">
+        <p><span style="color: red;font-size: large; font-family: Arial, Helvetica, sans-serif;">Code Used</span><br>
+        <p><span style="color: #00FF00;">&lt;script&gt;</span><br>
+        document.addEventListener('DOMContentLoaded', function() {<br>
+            const conditions = document.querySelectorAll('ul li');<br>
+            conditions.forEach(condition => {<br>
+                if (condition.textContent.includes('Exceeds Expectations')) {<br>
+                    condition.style.color = 'goldenrod';<br>
+                } else if (condition.textContent.includes('Meets Expectations')) {<br>
+                    condition.style.color = 'green';<br>
+                } else {<br>
+                    condition.style.color = 'red';<br>
+                }<br>
+            });<br>
+        });<br>
+        <span style="color: #00FF00;">&lt;/script&gt;</span><br>
+    </p>
+    </div>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const conditions = document.querySelectorAll('ul li');
+        conditions.forEach(condition => {
+            if (condition.textContent.includes('Exceeds Expectations')) {
+                condition.style.color = 'goldenrod';
+            } else if (condition.textContent.includes('Meets Expectations')) {
+                condition.style.color = 'green';
+            } else {
+                condition.style.color = 'red';
+            }
+        });
+    });
+</script>
+</html>

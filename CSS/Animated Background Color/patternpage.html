@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Pattern</title>
+    <style>
+        body {
+            background-image:
+                repeating-linear-gradient(135deg, #b3e0ff 0 10px, transparent 10px 20px),
+                repeating-linear-gradient(225deg, #43e97b 0 10px, transparent 10px 20px),
+                repeating-linear-gradient(45deg, #f7d94c 0 5px, transparent 5px 20px);
+            background-size: 40px 40px, 60px 60px, 80px 80px;
+            background-blend-mode: multiply;
+            animation: pattern-animation 8s linear infinite;
+            min-height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        @keyframes pattern-animation {
+            0% {
+                background-position: 0 0, 0 0, 0 0;
+            }
+            100% {
+                background-position: 80px 80px, 120px 120px, 160px 160px;
+            }
+        }
+        h1 {
+            text-align: center;
+            color: #0077b6;
+            margin-top: 0;
+        }
+        p {
+            max-width: 600px;
+            margin: 30px auto;
+            text-align: center;
+            font-size: 1.2em;
+            color: #333;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        ul li{
+            max-width: 500px;
+            margin-left: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            color: #222;
+            font-size: 1.1em;
+        }
+        ul {
+            max-width: 500px;
+            margin: 30px auto;
+            margin-left: 20px;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            color: #222;
+            font-size: 1.1em;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <main style="width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:80vh;">
+        <h1>Animated Pattern Background</h1>
+        <p>This page demonstrates a pure CSS animated pattern background using <code>repeating-linear-gradient</code> and <code>@keyframes</code>. The pattern moves smoothly, creating a dynamic and modern visual effect without any images.</p>
+        <ul>
+            <li>Pure CSS pattern, no images required</li>
+            <li>Animated using <code>@keyframes</code></li>
+            <li>Responsive and lightweight</li>
+            <li>Easy to customize colors and speed</li>
+        </ul>
+    </main>
+    <button onclick="location.href='index.html'">Change to Gradient Animation</button>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font & Text</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@400;500&display=swap');
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: #f7f8fa;
+            margin: 0;
+            padding: 0;
+        }
+        .main-container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+            padding: 40px 48px 32px 48px;
+        }
+        .header {
+            text-align: left;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 2.2rem;
+            font-weight: 500;
+            color: #1a237e;
+            margin-bottom: 6px;
+            letter-spacing: 0.5px;
+            text-transform: none;
+        }
+        .subtitle {
+            text-align: left;
+            font-family: 'Roboto', Arial, sans-serif;
+            font-size: 1.1rem;
+            color: #374151;
+            margin-bottom: 28px;
+            font-style: normal;
+            letter-spacing: 0.2px;
+        }
+        .section-title {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #283593;
+            margin-top: 28px;
+            margin-bottom: 10px;
+            text-decoration: underline solid #c5cae9 2px;
+            text-underline-offset: 5px;
+            letter-spacing: 0.5px;
+        }
+        .info-list {
+            margin: 0 0 18px 0;
+            padding: 0 0 0 20px;
+            font-family: 'Roboto', Arial, sans-serif;
+            font-size: 1rem;
+            color: #222;
+            line-height: 1.7;
+        }
+        .highlight {
+            font-weight: 500;
+            color: #283593;
+            background: none;
+            padding: 0;
+            border-radius: 0;
+            font-variant: small-caps;
+            letter-spacing: 0.5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 24px;
+            font-family: 'Roboto', Arial, sans-serif;
+            font-size: 1rem;
+        }
+        th, td {
+            padding: 10px 8px;
+            border: 1px solid #e3e6f0;
+            text-align: left;
+            vertical-align: top;
+        }
+        thead th {
+            background: #e8eaf6;
+            color: #1a237e;
+            font-weight: 500;
+            font-size: 1.05rem;
+            letter-spacing: 0.5px;
+        }
+        pre, code {
+            background: #f3f4f6;
+            border-radius: 8px;
+            padding: 20px;
+            font-size: 1rem;
+            font-family: 'Roboto Mono', 'Consolas', monospace;
+            color: #2d3748;
+            border: 1px solid #d1d5db;
+            overflow-x: auto;
+            white-space: pre;
+            word-wrap: normal;
+            line-height: 1.6;
+        }
+        pre {
+            margin-bottom: 24px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        code {
+            display: block;
+        }
+        .footer {
+            text-align: right;
+            margin-top: 36px;
+            font-size: 0.98rem;
+            color: #7b809a;
+            font-family: 'Roboto', Arial, sans-serif;
+            border-top: 1px solid #e3e6f0;
+            padding-top: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">Web Development Study Material</div>
+        <div class="subtitle">Comprehensive resources and notes for students learning HTML, CSS, and JavaScript</div>
+        <div class="section-title">HTML Basics</div>
+        <ul class="info-list">
+            <li><span class="highlight">HTML Structure:</span> Elements, tags, attributes, nesting, and document flow.</li>
+            <li><span class="highlight">Common Tags:</span> &lt;div&gt;, &lt;span&gt;, &lt;h1&gt;-&lt;h6&gt;, &lt;p&gt;, &lt;a&gt;, &lt;img&gt;, &lt;ul&gt;, &lt;li&gt;.</li>
+            <li><span class="highlight">Semantic HTML:</span> &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;section&gt;, &lt;footer&gt; for better accessibility and SEO.</li>
+        </ul>
+        <div class="section-title">CSS Essentials</div>
+        <ul class="info-list">
+            <li><span class="highlight">Selectors:</span> Class, ID, element, attribute, pseudo-classes.</li>
+            <li><span class="highlight">Box Model:</span> Content, padding, border, margin.</li>
+            <li><span class="highlight">Styling:</span> Colors, fonts, backgrounds, borders, spacing, display, position.</li>
+            <li><span class="highlight">Responsive Design:</span> Media queries, flexible layouts, mobile-first approach.</li>
+        </ul>
+        <div class="section-title">JavaScript Fundamentals</div>
+        <ul class="info-list">
+            <li><span class="highlight">Variables & Data Types:</span> let, const, var, strings, numbers, arrays, objects.</li>
+            <li><span class="highlight">Functions:</span> Declaration, expression, arrow functions, parameters, return values.</li>
+            <li><span class="highlight">DOM Manipulation:</span> Selecting elements, changing content/styles, event handling.</li>
+            <li><span class="highlight">Control Structures:</span> if, else, switch, for, while, break, continue.</li>
+        </ul>
+        <div class="section-title">Quick Reference Table</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Topic</th>
+                    <th>Key Points</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>HTML</td>
+                    <td>Structure, Elements, Attributes, Forms</td>
+                </tr>
+                <tr>
+                    <td>CSS</td>
+                    <td>Selectors, Box Model, Flexbox, Grid</td>
+                </tr>
+                <tr>
+                    <td>JavaScript</td>
+                    <td>Variables, Functions, DOM, Events</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="section-title">Sample Code Snippet</div>
+        <pre><code>&lt;!-- HTML Example --&gt;
+&lt;button onclick="alert('Hello!')"&gt;Click Me&lt;/button&gt;
+
+/* CSS Example */
+button {
+  background: #2d2d72;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+/* JavaScript Example */
+document.querySelector('button').addEventListener('click', function() {
+  alert('Button clicked!');
+});
+</code></pre>
+        <div class="footer">&copy; 2025 Web Development Study Material by Faceprep.</div>
+    </div>
+</body>
+</html>

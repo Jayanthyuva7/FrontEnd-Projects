@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Selector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 700px;
+            margin: 40px auto 0 auto;
+            background: white;
+            padding: 30px 30px 20px 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 0;
+        }
+        .item {
+            border-radius: 8px;
+            width: 160px;
+            align-items: center;
+            text-align: center;
+            list-style-type: none;
+            padding: 15px 10px;
+            background-color: #e7e7e7;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #333;
+            color: #fff;
+            padding: 15px 40px;
+            border-radius: 5px 5px 0 0;
+        }
+        .nav-logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-links li a:hover {
+            color: #4CAF50;
+        }
+        .feature-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0 20px 0;
+        }
+        .feature-table th, .feature-table td {
+            border: 1px solid #ddd;
+            padding: 10px 15px;
+            text-align: left;
+        }
+        .feature-table th {
+            background: #f0f0f0;
+        }
+        .footer {
+            text-align: center;
+            padding: 15px 0;
+            background: #333;
+            color: #fff;
+            border-radius: 0 0 5px 5px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+        <nav class="navbar">
+            <div class="nav-logo">Faceprep CSS Selectors</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <h1>Welcome to Faceprep's CSS Selector Tutorial</h1>
+            <p>Faceprep brings you an interactive guide to mastering CSS selectors. This page is designed to help students understand how to use different CSS selectors to style web pages effectively.</p>
+            <ul>
+                <li class="item">Class Selector Example</li>
+                <li class="item">ID Selector Example</li>
+                <li class="item">Element Selector Example</li>
+                <li class="item">Attribute Selector Example</li>
+            </ul>
+            <section id="features">
+                <h2>Selector Feature Comparison</h2>
+                <table class="feature-table">
+                    <thead>
+                        <tr>
+                            <th>Selector</th>
+                            <th>Purpose</th>
+                            <th>Syntax Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Class Selector</td>
+                            <td>Styles elements with a specific class</td>
+                            <td><code>.item</code></td>
+                        </tr>
+                        <tr>
+                            <td>ID Selector</td>
+                            <td>Styles a unique element with an ID</td>
+                            <td><code>#main</code></td>
+                        </tr>
+                        <tr>
+                            <td>Element Selector</td>
+                            <td>Styles all elements of a specific type</td>
+                            <td><code>ul, li, p</code></td>
+                        </tr>
+                        <tr>
+                            <td>Attribute Selector</td>
+                            <td>Styles elements with a specific attribute</td>
+                            <td><code>input[type="text"]</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section id="about">
+                <h2>About Faceprep</h2>
+                <p>Faceprep is dedicated to empowering students with practical skills in web development. This tutorial demonstrates how CSS selectors can be used to create visually appealing and well-structured web pages. Explore the examples above and try editing the selectors to see their effects!</p>
+            </section>
+        </div>
+        <footer class="footer">
+            &copy; 2025 Faceprep CSS Selectors Tutorial. All rights reserved.
+        </footer>
+    </body>
+</html>

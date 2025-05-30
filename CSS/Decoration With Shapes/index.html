@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decoration with Shapes</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .wave-section {
+            position: relative;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            height: 200px;
+            clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+        }
+
+        .zigzag-section {
+            position: relative;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            height: 200px;
+            clip-path: polygon(0 20%, 10% 15%, 20% 20%, 30% 15%, 40% 20%, 50% 15%, 60% 20%, 70% 15%, 80% 20%, 90% 15%, 100% 20%, 100% 100%, 0 100%);
+        }
+
+        .triangle-section {
+            position: relative;
+            background: linear-gradient(135deg, #43cea2, #185a9d);
+            height: 200px;
+            clip-path: polygon(50% 0, 100% 100%, 0 100%);
+        }
+
+        .content {
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="wave-section">
+        <div class="content">
+            <h1>Welcome to Decorative Shapes</h1>
+            <p>Create stunning designs with CSS clip-path!</p>
+        </div>
+    </div>
+    <div class="zigzag-section">
+        <div class="content">
+            <h1 style="margin-top: 30px;">Explore the Zigzag Section</h1>
+            <p>Another cool effect using CSS clip-path!</p>
+        </div>
+    </div>
+    <div class="triangle-section">
+        <div class="content">
+            <h1 style="margin-top: 40px;">Discover Triangle Shapes</h1>
+            <p>Bold and unique designs with CSS!</p>
+        </div>
+    </div>
+</body>
+</html>

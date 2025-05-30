@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning</title>
+    <style>
+        body {
+            background: #f4f6fb;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .demo-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 40px;
+            max-width: 900px;
+            margin: 80px auto 0 auto;
+            min-height: 60vh;
+        }
+        .floating-badge-demo {
+            position: relative;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 40px 32px 32px 32px;
+            min-width: 340px;
+            min-height: 180px;
+            flex: 1 1 340px;
+        }
+        .floating-badge-demo .badge {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            background: linear-gradient(90deg, #ff9800 60%, #ffc107 100%);
+            color: #fff;
+            padding: 7px 20px;
+            border-radius: 22px;
+            font-size: 1.05em;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+            letter-spacing: 0.5px;
+        }
+        .demo-content h2 {
+            margin: 0 0 8px 0;
+            font-size: 1.5em;
+            color: #222;
+        }
+        .demo-content p {
+            margin: 0 0 8px 0;
+            color: #555;
+            font-size: 1.08em;
+        }
+        .sticky-sidebar {
+            position: sticky;
+            top: 90px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            padding: 24px 20px;
+            min-width: 180px;
+            height: fit-content;
+        }
+        .sticky-sidebar h3 {
+            margin-top: 0;
+            font-size: 1.1em;
+            color: #333;
+        }
+        .sticky-sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sticky-sidebar li {
+            margin-bottom: 10px;
+        }
+        .sticky-sidebar a {
+            color: #2196f3;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .sticky-sidebar a:hover {
+            color: #1769aa;
+        }
+        .notification {
+            position: fixed;
+            top: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #e91e63;
+            color: #fff;
+            padding: 10px 32px;
+            border-radius: 24px;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+            z-index: 1000;
+            font-size: 1.05em;
+        }
+        .info-text{
+            margin: 0;
+            padding: 0;
+            font-size: 1.1em;
+            color: #555;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .fixed-footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100vw;
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 14px 0 10px 0;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="notification">New Message!</div>
+    <main class="demo-container">
+        <div class="floating-badge-demo">
+            <span class="badge">Top Performer</span>
+            <div class="demo-content">
+                <h2>Faceprep Employee</h2>
+                <p style="margin-top: 40px;">Senior UI/UX Designer</p>
+                <p>Recognized for outstanding project delivery and team leadership.</p>
+            </div>
+        </div>
+        <div class="sticky-sidebar">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Teams</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </div>
+    </main>
+    <p class="info-text">This page demonstrates how css-positioning works</p>
+    <div class="fixed-footer">This is a fixed footer</div>
+</body>
+</html>
